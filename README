@@ -1,1 +1,14 @@
 Simple platform based game licensed under the terms of GNU/GPLv3.
+
+Dependencies:
+cmake
+sdl
+sdl_ttf
+sdl_mixer
+sdl_image
+
+Compilation:
+cmake .
+make
+
+Installation is not working properly, just use ./src/tuxtower to run the game.
