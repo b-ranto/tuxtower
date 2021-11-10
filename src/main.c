@@ -191,12 +191,12 @@ int move_init(map_info *map, hero tux, platform **first, platform **last){
 	SDL_Surface *helpl =  SDL_CreateRGBSurface(SDL_SWSURFACE, gd->screen.width,
 gd->screen.height + BACK_Y, gd->screen.bpp, 255, 255, 255, 0);
 	if(helpl == NULL){
-		fprintf(stderr, "Cannot create surface.\n");
+		fprintf(stderr, "Cannot create surface: %s.\n", SDL_GetError());
 		return 0;
 	}
 	map->surface = SDL_DisplayFormat(helpl);
 	if(map->surface == NULL){
-		fprintf(stderr, "Cannot set display format for map->surface.\n");
+		fprintf(stderr, "Cannot set display format for map->surface: %s.\n", SDL_GetError());
 		return 0;
 	}
 	SDL_FreeSurface(helpl);

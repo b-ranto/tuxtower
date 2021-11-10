@@ -67,7 +67,7 @@ int load_conf(game_data *gd){
 		gd->screen.fs = 0;
 	if(state < 4)
 		gd->screen.frame = 1;
-	gd->screen.bpp = 0; // For SDL autorecognition
+	gd->screen.bpp = 24; // For SDL autorecognition
 	gd->screen.width = gd->screen.real_width - VYREZ_X;
 	gd->screen.height = gd->screen.real_height - VYREZ_Y;
 
